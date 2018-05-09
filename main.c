@@ -95,7 +95,10 @@ int main(int argc, char ** argv)
                              (LPDWORD)&nbytes,
                              NULL);
     if(status != 0)
+     {
         printf("[-] Failed IO control, error code: %lu\n", GetLastError());
+	exit(1);
+     }
 
     printf("[+] Output data:\n");
     DumpHex(bufOutput,nbytes);
