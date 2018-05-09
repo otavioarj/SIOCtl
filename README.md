@@ -23,8 +23,8 @@ HWiNFO AMD64 Kernel driver version 8.98 and lower allows unprivileged user to se
 
 * POC: <br>
 An unprivileged user sending an especial IOCTLs, i.e 0x85FE2608 to symbolic device "HWiNFO32", with in-buffer (user-space) containing a physical memory address, size and a virtual memory address, results in the driver mapping the physical memory and reading it, copying its content to the virtual address.<br> 
-The file 8061.data is formatted in this way:
-   - Phy. Address: FFFFF7F100002000
+The file 8061.data is formatted in this fashion:
+   - Phy. Address: FFFFF7F100002000 (source)
    - Size: 00000008        
    - Dest. Virt. Address: 4141414141414141
 
