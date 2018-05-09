@@ -85,7 +85,7 @@ int main(int argc, char ** argv)
         fread(&byte, 1, 1, fileHandle);
         bufInput[cnt++]=byte;
     }
-    printf("%x | %d.\n",currentIoctl,cnt);
+    //printf("%x | %d.\n",currentIoctl,cnt);
     status = DeviceIoControl(deviceHandle,
                              currentIoctl,
                              &bufInput,
